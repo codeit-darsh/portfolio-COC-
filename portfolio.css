@@ -1,0 +1,265 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-image: url('img_1875.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Splash screen styles */
+    .splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease-in-out 2s forwards; /* Delay + fade */
+    }
+
+    .splash img {
+      width: 250px;
+      height: auto;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    
+
+    .armycamp-btn:hover,
+    .barracks-btn:hover,
+    .tesla-btn:hover,
+    .townhall-btn:hover,
+    .castle-btn:hover,
+    .laboratory-btn:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .armycamp-btn:active,
+    .laboratory-btn:active,
+    .barracks-btn:active,
+    .castle-btn:active,
+    .tesla-btn:active,
+    .townhall-btn:active {
+     transform: scale(0.9);
+     transition: transform 0.15s ease-in-out;
+    }
+
+    .icon-overlay {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .icon-overlay button {
+      position: absolute;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .castle-btn {
+      left: 22%;
+      top: 53%;
+    }
+    .tesla-btn {
+      left: 45%;
+      top: 72%;
+    }
+    .armycamp-btn {
+      left: 69%;
+      top: 55%;
+    }
+    .barracks-btn {
+      left: 40%;
+      top: 53%;
+    }
+    .townhall-btn {
+      left: 45%;
+      top: 37%;
+    }
+
+    .laboratory-btn {
+      top:15%;
+      left:55%;
+    }
+    
+
+    .icon-overlay img {
+      width: 60px;
+      height: auto;
+      transition: transform 0.3s;
+    }
+
+    .icon-overlay button:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .icon-overlay img {
+        width: 40px;
+      }
+    }
+
+    .side-popup {
+      position: fixed;
+      top: 20%;
+      left: 0;
+      width: 220px;
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 2px 2px 10px #000;
+      z-index: 10000;
+      display: none; /* Hidden by default */
+      background: none;
+      border: none;    }
+    .side-popup img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: none;
+      border: none;
+      
+    }
+   
+
+    .speech-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.3);
+      z-index: 20000;
+      display: none; /* Hide by default */
+    }
+
+    .speech-content {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .speech-girl {
+      width: 300px;
+      height: auto;
+    }
+
+    .speech-bubble-main {
+      background: #fff;
+      color: #222;
+      padding: 16px 22px;
+      border-radius: 18px;
+      font-size: 1.1rem;
+      box-shadow: 2px 2px 12px #222;
+      position: relative;
+      min-width: 180px;
+      max-width: 60vw;
+      word-break: break-word;
+      margin-bottom: 50vh;
+      
+    }
+
+    .speech-bubble-main::after {
+      content: '';
+      position: absolute;
+      left: -18px;
+      bottom: 18px;
+      border-width: 12px;
+      border-style: solid;
+      border-color: transparent #fff transparent transparent;
+    }
+  
+    /* Responsive for small screens */
+    @media (max-width: 600px) {
+      .speech-content {
+        flex-direction: column;
+        align-items: flex-start;
+
+      }
+      .speech-girl {
+        width: 70px;
+        margin-right: 0;
+        margin-bottom: 10px;
+        background-color: #9f4141;
+        border: none;
+        top:90%;
+        left:5%;
+        size-adjust: 100%;
+      }
+      .speech-bubble-main {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+        min-width: 120px;
+        max-width: 80vw;
+        
+
+      }
+      .speech-bubble-main::after {
+        left: 10px;
+        bottom: -18px;
+        border-width: 10px;
+        border-color: #fff transparent transparent transparent;
+        transform: rotate(90deg);
+      }
+    }
+
+    .tooltip {
+      position: absolute;
+      left: 50%;
+      bottom: 110%; /* Places the bubble above the image */
+      transform: translateX(-50%);
+      background: #fff;
+      color: #222;
+      padding: 8px 14px;
+      border-radius: 15px;
+      font-size: 1rem;
+      white-space: nowrap;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      box-shadow: 1px 1px 8px #222;
+      transition: opacity 0.2s;
+    }
+
+    /* Show the bubble on hover/focus */
+    .icon-overlay button:hover .tooltip,
+    .icon-overlay button:focus .tooltip {
+      opacity: 1;
+    }
+
+    /* Add a little arrow to the bubble */
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 8px;
+      border-style: solid;
+      border-color: #fff transparent transparent transparent;
+    }
