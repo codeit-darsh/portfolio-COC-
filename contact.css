@@ -1,0 +1,81 @@
+body {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('background(introduction).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Remove flex from .contact-block */
+.contact-block {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 36px 32px 28px 32px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.contact-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  color: #222;
+}
+
+.contact-header p {
+  margin: 0 0 24px 0;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 10px;
+}
+
+.contact-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.contact-btn:hover .contact-icon {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px #888;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-block {
+    padding: 16px 6px;
+    max-width: 95vw;
+  }
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .contact-icons {
+    gap: 16px;
+  }
+}

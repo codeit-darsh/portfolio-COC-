@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  background-image: url('background(introduction).jpg');
+  background-size: cover;         /* Cover the whole screen */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* No tiling */
+  background-attachment: fixed;   /* Make background non-scrollable */
+  min-height: 100vh;              /* Full viewport height */
+  margin: 0;                 /* Remove default margin */
+}
+
+.interest-block {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 36px 32px 28px 32px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.interest-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  color: #222;
+  text-align: center;
+}
+
+.interest-header p {
+  margin: 0 0 24px 0;
+  color: #555;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.interest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.interest-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  background: #f8f8fc;
+  border-radius: 12px;
+  padding: 18px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.interest-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px #ddd;
+  background: #fff;
+}
+
+.interest-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: #1a237e;
+}
+
+.interest-info ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 700px) {
+  .interest-block {
+    padding: 12px 2vw;
+    max-width: 98vw;
+  }
+  .interest-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .interest-icon {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,0 +1,83 @@
+body {
+  background-image: url('background(introduction).jpg');
+  background-size: cover;         /* Cover the whole screen */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* No tiling */
+  background-attachment: fixed;   /* Make background non-scrollable */
+  min-height: 100vh;              /* Full viewport height */
+}
+
+.project-block {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 28px 24px 20px 24px;
+  margin-top: 15%;
+
+}
+
+
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.yt-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  margin-right: 40%;
+}
+
+.yt-icon {
+  width: 64px;   /* Increased size */
+  height: 64px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.yt-btn:hover .yt-icon {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px #e53935;
+}
+
+.yt-link-text {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #e53935;
+  font-weight: 600;
+}
+
+.project-description {
+  margin-top: 16px;
+  font-size: 1.08rem;
+  color: #333;
+  margin-top: 10%;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .project-block {
+    padding: 14px 6px;
+  }
+  .yt-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
