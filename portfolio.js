@@ -17,6 +17,10 @@ document.getElementById('myBtn_lab').onclick = function() {
   window.location.href = 'interest.html';
 };
 
+document.getElementById('myBtn_castle').onclick = function() {
+  window.location.href = 'may experiences.html';
+};
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
